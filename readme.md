@@ -20,7 +20,7 @@ Calcolo del prezzo del biglietto del treno (js-biglietto-treno-form)
 
  - calcolo prezzo biglietto con e senza sconto (stampando valori e risultati in console e in pagina)
  1) Realizzo righe per chiedere all'utente i km da percorrere e stampare in console i dati
- 2) -------- ----- --- -------- -- ------- la sua età e stampare in console i dati
+ 2) -------- ----- --- -------- ---------- la sua età e stampare in console i dati
  3) -------- ----- --- calcolare il prezzo totale del biglietto senza alcuno sconto e stampare in console i risultati 
  4) -------- ----- --- --------- lo sconto in base all età e stampare in console i risultati
  5) -------- ----- --- --------- il prezzo totale del biglietto (con lo sconto) e stampare in console i risultati
