@@ -25,48 +25,50 @@ console.log('Elaborazione......')
 
     // Richiesta del numero di chilometri da percorrere
 
-    let userKm = parseInt(prompt('Distanza da percorrere(km)'))
+    // let userKm = parseInt(prompt('Distanza da percorrere(km)'))
 
-    if (isNaN(userKm)){
-        console.log('Errore: Per favore inserisci dati numerici')
-    } else {
-        console.log('Distanza da percorrere: ' + userKm.toFixed(1) + 'km')
-    }
+    // if (isNaN(userKm)){
+    //     console.log('Errore: Per favore inserisci dati numerici')
+    // } else {
+    //     console.log('Distanza da percorrere: ' + userKm.toFixed(1) + 'km')
+    // }
 
+    // // prezzo del biglietto in base ai km
 
+    // const priceForKm = 0.267113;
 
-    // Richiesta Età del passeggero
+    // // Richiesta Età del passeggero
 
-    let userAge = parseInt(prompt('Età del passeggero'))
+    // // let userAge = parseInt(prompt('Età del passeggero'))
 
-    if (isNaN(userAge)){
-        console.log('Errore: Per favore inserisci dati numerici')
-    } else {
-        console.log('Eta utente: ' + userAge)
-    }
+    // if (isNaN(userAge)){
+    //     console.log('Errore: Per favore inserisci dati numerici')
+    // } else {
+    //     console.log('Eta utente: ' + userAge)
+    // }
 
-    // Elaborazione prezzo totale del biglietto (senza sconto)
+    // // Elaborazione prezzo totale del biglietto (senza sconto)
 
-    let price = (priceForKm * userKm)
+    // let price = (priceForKm * userKm)
 
-    console.log('Prezzo: ' + price.toFixed(2))
+    // console.log('Prezzo: ' + price.toFixed(2))
 
-    // Calcolo lo sconto in base all età
+    // // Calcolo lo sconto in base all età
 
-    let discount = 0;
+    // let discount = 0;
 
-    if(userAge <= 21){
-        discount = 24.552;
-    } else if(userAge >= 63){
-        discount = 37.893
-    }
+    // if(userAge <= 21){
+    //     discount = 24.552;
+    // } else if(userAge >= 63){
+    //     discount = 37.893
+    // }
 
-    console.log('Sconto: ' + discount.toFixed(0) + '%')
+    // console.log('Sconto: ' + discount.toFixed(0) + '%')
 
-    // Elaborazione prezzo totale del biglietto (con lo sconto)
+    // // Elaborazione prezzo totale del biglietto (con lo sconto)
 
-    const discountedPrice = (price - ((discount / 100) * price))
-    console.log('Prezzo scontato: ' + ' ' + discountedPrice.toFixed(2) + '€')
+    // const discountedPrice = (price - ((discount / 100) * price))
+    // console.log('Prezzo scontato: ' + ' ' + discountedPrice.toFixed(2) + '€')
 
 // end - test calcolo prezzo biglietto con e senza sconto
 
@@ -110,7 +112,8 @@ button.addEventListener('click', function(){
         document.getElementById('discount').innerText = 'Prezzo Intero';
     }
 
-
+    const priceForKm = 0.267113;
+    let price = (priceForKm * userKm)
     const finalPrice = (price - ((discount / 100) * price))
     console.log('Prezzo Finale: ' + ' ' + finalPrice.toFixed(2) + '€')
     document.getElementById('final-price').innerText = 'Prezzo Finale: ' + ' ' + finalPrice.toFixed(2) + '€';
