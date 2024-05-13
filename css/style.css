@@ -1,4 +1,8 @@
 body {
     background-color: darkslategray;
-    color: lightseagreen;
+    color: #e1e1e1;
+}
+
+th {
+    padding-right: 7rem;
 }

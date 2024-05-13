@@ -17,17 +17,71 @@
     <header>
         <section>
             <h1>
-                Hi!
+                Calcolo prezzo treni
             </h1>
         </section>
     </header>
 
-    <main></main>
+    <main>
+        <section>
+            <article>
+                <div>
+                    <label for="distance-km">Distanza da percorrere</label>
+                    <input type="number" name="distance-km" id="distance-km" placeholder="km">
+                </div>
+                <div>
+                    <label for="age">Età passeggero/a</label>
+                    <input type="number" name="age" id="age">
+                </div>
+                <div>
+                    <button id="calculate">Calcola</button>
+                    <button id="reset">reset</button>
+                </div>
+            </article>
+        </section>
+        <section>
+            <h2>Prezzo del treno</h2>
+            <article>
+                <table>
+                    <thead>
+                        <th>
+                            Distanza da percorrere
+                        </th>
+                        <th>
+                            Età passeggero/a
+                        </th>
+                        <th>
+                            Sconto
+                        </th>
+                        <th>
+                            Costo biglietto
+                        </th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="user-km">
+                                
+                            </td>
+                            <td id="user-age">
+                                
+                            </td>
+                            <td id="discount">
+                                
+                            </td>
+                            <td id="final-price">
+                                
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+    </main>
 
     <footer></footer>
 
 
     <!-- personal js -->
-    <script type="text/javascript" src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
