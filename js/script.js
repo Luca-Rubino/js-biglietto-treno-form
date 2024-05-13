@@ -44,3 +44,28 @@ console.log('Elaborazione......')
     } else {
         console.log('Eta utente: ' + userAge)
     }
+
+    // Elaborazione prezzo totale del biglietto (senza sconto)
+
+    let price = (priceForKm * userKm)
+
+    console.log('Prezzo: ' + price.toFixed(2))
+
+    // Calcolo lo sconto in base all età
+
+    let discount = 0;
+
+    if(userAge <= 21){
+        discount = 24.552;
+    } else if(userAge >= 63){
+        discount = 37.893
+    }
+
+    console.log('Sconto: ' + discount.toFixed(0) + '%')
+
+    // Elaborazione prezzo totale del biglietto (con lo sconto)
+
+    const discountedPrice = (price - ((discount / 100) * price))
+    console.log('Prezzo scontato: ' + ' ' + discountedPrice.toFixed(2) + '€')
+
+// end - test calcolo prezzo biglietto con e senza sconto
