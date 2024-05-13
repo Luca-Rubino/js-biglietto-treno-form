@@ -69,3 +69,63 @@ console.log('Elaborazione......')
     console.log('Prezzo scontato: ' + ' ' + discountedPrice.toFixed(2) + '€')
 
 // end - test calcolo prezzo biglietto con e senza sconto
+
+// funzione per prendere i dati con imput
+
+button = document.getElementById('calculate')
+
+button.addEventListener('click', function(){
+    userKm = parseInt(document.getElementById('distance-km').value)
+
+    if (isNaN(userKm)){
+        console.log('Errore: Per favore inserisci dati numerici')
+        document.getElementById('user-km').innerText = 'Errore: valore errato';
+    } else {
+        console.log('Distanza da percorrere: ' + userKm.toFixed(1) + 'km')
+        document.getElementById('user-km').innerText = 'Distanza da percorrere: ' + userKm.toFixed(1) + 'km';
+    }
+
+    userAge = document.getElementById('age').value;
+
+    if (isNaN(userAge)){
+        console.log('Errore: Per favore inserisci dati numerici')
+        document.getElementById('user-age').innerText = 'Errore: valore errato';
+    } else {
+        console.log('Eta utente: ' + userAge)
+        document.getElementById('user-age').innerText = 'Eta utente: ' + userAge;
+    }
+
+    let discount = 0;
+
+    if(userAge <= 21){
+        discount = 24.552;
+        console.log('Sconto under 21: ' + discount + '%')
+        document.getElementById('discount').innerText = 'Under 21: ' + discount + '%';
+    } else if(userAge >= 63){
+        discount = 37.893
+        console.log('Sconto Over 63: ' + discount + '%')
+        document.getElementById('discount').innerText = 'Over 63: ' + discount + '%';
+    } else {
+        console.log('Prezzo Intero')
+        document.getElementById('discount').innerText = 'Prezzo Intero';
+    }
+
+
+    const finalPrice = (price - ((discount / 100) * price))
+    console.log('Prezzo Finale: ' + ' ' + finalPrice.toFixed(2) + '€')
+    document.getElementById('final-price').innerText = 'Prezzo Finale: ' + ' ' + finalPrice.toFixed(2) + '€';
+    
+})
+
+// botton reset
+
+resetButton = document.getElementById('reset')
+
+resetButton.addEventListener('click', function(){
+    document.getElementById('distance-km').value = '';
+    document.getElementById('user-km').innerText = '';
+    document.getElementById('age').value = '';
+    document.getElementById('user-age').innerText = '';
+    document.getElementById('discount').innerText = '';
+    document.getElementById('final-price').innerText = '';
+});
